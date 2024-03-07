@@ -19,16 +19,16 @@ const Index = () => {
           para una mejor experiencia es recomendable iniciar sesion en el siguiente orden.
         </p>
         <ul>
-          <li><h4>Usuario:</h4> Coordinador</li>
-          <li><h4>Contraseña:</h4>Coordinador1</li>
+          <li><h4>Usuario:</h4> coordinador</li>
+          <li><h4>Contraseña:</h4>coordinador1</li>
         </ul>
         <ul>
-          <li><h4>Usuario:</h4> Medico</li>
-          <li><h4>Contraseña:</h4> Medico1</li>
+          <li><h4>Usuario:</h4> medico</li>
+          <li><h4>Contraseña:</h4> medico1</li>
         </ul>
         <ul>
-          <li><h4>Usuario:</h4> Administrador</li>
-          <li><h4>Contraseña:</h4> Administrador1</li>
+          <li><h4>Usuario:</h4> administrador</li>
+          <li><h4>Contraseña:</h4> administrador1</li>
         </ul>
         <button onClick={goHome}>Comenzar</button>
       </div>
