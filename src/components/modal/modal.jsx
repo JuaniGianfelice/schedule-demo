@@ -29,6 +29,12 @@ const AddEventModal = ({ isOpen, onClose, onEventAdded }) => {
       date: formattedDate,
     });
     onClose();
+
+    // Resetear el formulario
+    setFormData({
+      title: "",
+    });
+    setDate(new Date());
   };
 
   return (
@@ -42,6 +48,7 @@ const AddEventModal = ({ isOpen, onClose, onEventAdded }) => {
               value={formData.title}
               name="title"
               onChange={handleChange}
+              required
             >
               <option value="" disabled>
                 Seleccionar profesional
@@ -62,6 +69,7 @@ const AddEventModal = ({ isOpen, onClose, onEventAdded }) => {
             dateFormat="DD-MM-YYYY"
             timeFormat={false}
             className="option"
+            required
           />
           <button type="submit" className="btn">Agregar</button>
         </div>

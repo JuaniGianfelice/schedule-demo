@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
-
   const navigate = useNavigate();
 
   const [loginData, setLoginData] = useState({
@@ -28,25 +27,25 @@ const Home = () => {
         if (password === 'coordinador1') {
           navigate('/CoordinadorDashboard');
         } else {
-          console.error("Error al iniciar sesión: Contraseña incorrecta");
+          alert('Contraseña incorrecta');
         }
         break;
       case 'administrador':
         if (password === 'administrador1') {
           navigate('/AdminDashboard');
         } else {
-          console.error("Error al iniciar sesión: Contraseña incorrecta");
+          alert('Contraseña incorrecta');
         }
         break;
       case 'medico':
         if (password === 'medico1') {
           navigate('/VisitDashboard');
         } else {
-          console.error("Error al iniciar sesión: Contraseña incorrecta");
+          alert('Contraseña incorrecta');
         }
         break;
       default:
-        console.error("Error al iniciar sesión: Usuario desconocido");
+        alert('Usuario desconocido');
     }
   };
 
@@ -71,4 +70,3 @@ const Home = () => {
 };
 
 export default Home;
-

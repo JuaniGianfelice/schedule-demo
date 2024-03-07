@@ -17,7 +17,7 @@ const ScheduleGuard = ({ isVisitDashboard, isAdminDashboard }) => {
     setEvents(storedEvents);
   }, []);
 
-  // Función para guardar los eventos en localStorage
+  // Guardar los eventos en localStorage
   const saveEventsToLocalStorage = (updatedEvents) => {
     localStorage.setItem("events", JSON.stringify(updatedEvents));
   };
@@ -31,16 +31,9 @@ const ScheduleGuard = ({ isVisitDashboard, isAdminDashboard }) => {
 
   // Cerrar Sesion
   const handleLogout = () => {
-    navigate("/");
+    navigate("/home");
   };
 
-  const toolbar = () => {
-    if (isAdminDashboard) {
-      console.log("1");
-    } else {
-      console.log("2");
-    }
-  }
   
 
   return (
@@ -55,9 +48,8 @@ const ScheduleGuard = ({ isVisitDashboard, isAdminDashboard }) => {
         locale="es"
         height={600}
         headerToolbar={{
-          left: isVisitDashboard ? "" : "Add", // Agregar guardia solo si es dashboard de visita
+          left: isVisitDashboard ? "" : "Add",
           center: "title",
-          //right: isAdminDashboard ? "" : "today prev,next CloseSesion",
           right: "today prev,next CloseSesion",
         }}
         customButtons={{

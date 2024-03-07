@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router-dom';
 
 
 const AdminDashboard = () => {
-  const BeURL = process.env.REACT_APP_BE_URL;
   const [showCreateUserForm, setShowCreateUserForm] = useState(false);
   const [showCalendar, setShowCalendar] = useState(false);
   const navigate = useNavigate();
@@ -44,7 +43,7 @@ const AdminDashboard = () => {
   };
 
   const handleLogout = () => {
-    navigate('/');
+    navigate('/home');
   };
 
   return (

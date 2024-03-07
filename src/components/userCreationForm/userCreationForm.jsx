@@ -48,6 +48,7 @@ const UserCreationForm = () => {
             name="user"
             value={formData.user}
             onChange={handleChange}
+            required
           />
         </label>
 
@@ -58,6 +59,7 @@ const UserCreationForm = () => {
             name="password"
             value={formData.password}
             onChange={handleChange}
+            required
           />
         </label>
 
@@ -68,12 +70,13 @@ const UserCreationForm = () => {
             name="confirmPassword"
             value={formData.confirmPassword}
             onChange={handleChange}
+            required
           />
         </label>
 
         <label className="creation-form-group">
           Rol:
-          <select name="rol" value={formData.rol} onChange={handleChange}>
+          <select name="rol" value={formData.rol} onChange={handleChange} required>
             <option value="" disabled hidden>
               Seleccionar rol
             </option>
